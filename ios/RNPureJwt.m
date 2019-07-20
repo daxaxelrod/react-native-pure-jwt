@@ -55,7 +55,7 @@ RCT_REMAP_METHOD(sign,
     if(result.successResult) {
         resolve(result.successResult.encoded);
     } else {
-        reject(@"failed", @"Encoding failed", result.errorResult.error);
+        reject(result.errorResult.error);
     }
 }
 
@@ -127,7 +127,7 @@ RCT_REMAP_METHOD(decode,
                   });
     }
     else {
-        reject(@"failed", @"Decoding failed", result.errorResult.error);
+        reject(result.errorResult.error);
     }
 }
 
